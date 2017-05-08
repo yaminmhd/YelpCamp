@@ -17,7 +17,7 @@ var	commentRoutes = require('./routes/comments'),
 	campgroundRoutes = require('./routes/campground'),
 	authRoutes = require('./routes/index');
 
-var url = process.env.DATABASEURL || 'mongodb://yamin:Welcome123@ds133241.mlab.com:33241/mycampdb';
+var url = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp';
 mongoose.connect(url);
 //mongoose.connect('');
 app.set('view engine', 'ejs');
