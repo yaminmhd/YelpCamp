@@ -1,0 +1,33 @@
+{
+  "globals":{
+    "require":true,
+    "module":true,
+    "__dirname":true,
+    "process":true
+    },
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        //override our default settings
+        "no-console": "off",
+        "no-unused-vars": "warn"
+    }
+}
