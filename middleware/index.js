@@ -4,7 +4,7 @@ var Comment = require('../models/comment');
 var middlewareObj = {};
 
 middlewareObj.checkCampgroundOwnership = function(req,res,next){
-  //is user logged in?
+	//is user logged in?
 	if (req.isAuthenticated()){
 		Campground.findById(req.params.id, function(err,foundCampground){
 			if(err){
@@ -28,7 +28,7 @@ middlewareObj.checkCampgroundOwnership = function(req,res,next){
 
 
 middlewareObj.checkCommentOwnership = function(req,res,next){
-  //is user logged in?
+	//is user logged in?
 	if (req.isAuthenticated()){
 		Comment.findById(req.params.comment_id, function(err,foundComment){
 			if(err){
@@ -52,8 +52,8 @@ middlewareObj.checkCommentOwnership = function(req,res,next){
 middlewareObj.isLoggedIn = function(req,res,next){if(req.isAuthenticated()){
 	return next();
 }
-	req.flash('error', 'You need to logged in to do that');
-	res.redirect('/login');
+req.flash('error', 'You need to logged in to do that');
+res.redirect('/login');
 };
 
 

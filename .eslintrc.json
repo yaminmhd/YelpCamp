@@ -26,7 +26,6 @@
             "error",
             "always"
         ],
-        //override our default settings
         "no-console": "off",
         "no-unused-vars": "warn"
     }
